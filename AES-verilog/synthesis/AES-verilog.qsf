@@ -1,0 +1,142 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2023  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+# Date created = 15:29:25  April 16, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		AES-verilog_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY AES
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:29:24  APRIL 16, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
+set_global_assignment -name SEARCH_PATH ../test_benches
+set_global_assignment -name SEARCH_PATH ../source
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AA15 -to CLK
+set_location_assignment PIN_AE26 -to Display1[0]
+set_location_assignment PIN_AE27 -to Display1[1]
+set_location_assignment PIN_AE28 -to Display1[2]
+set_location_assignment PIN_AG27 -to Display1[3]
+set_location_assignment PIN_AF28 -to Display1[4]
+set_location_assignment PIN_AG28 -to Display1[5]
+set_location_assignment PIN_AH28 -to Display1[6]
+set_location_assignment PIN_AJ29 -to Display2[0]
+set_location_assignment PIN_AH29 -to Display2[1]
+set_location_assignment PIN_AH30 -to Display2[2]
+set_location_assignment PIN_AG30 -to Display2[3]
+set_location_assignment PIN_AF29 -to Display2[4]
+set_location_assignment PIN_AF30 -to Display2[5]
+set_location_assignment PIN_AD27 -to Display2[6]
+set_location_assignment PIN_AB23 -to Display3[0]
+set_location_assignment PIN_AE29 -to Display3[1]
+set_location_assignment PIN_AD29 -to Display3[2]
+set_location_assignment PIN_AC28 -to Display3[3]
+set_location_assignment PIN_AD30 -to Display3[4]
+set_location_assignment PIN_AC29 -to Display3[5]
+set_location_assignment PIN_AC30 -to Display3[6]
+set_location_assignment PIN_Y21 -to assert
+set_location_assignment PIN_AB12 -to mode[0]
+set_location_assignment PIN_AC12 -to mode[1]
+set_global_assignment -name VERILOG_FILE ../source/shift_add_3.v
+set_global_assignment -name VERILOG_FILE ../source/seg_tb.v
+set_global_assignment -name VERILOG_FILE ../source/inv_shift_rows.v
+set_global_assignment -name VERILOG_FILE ../source/inv_cipher.v
+set_global_assignment -name VERILOG_FILE ../source/bcdto7seg.v
+set_global_assignment -name VERILOG_FILE ../source/AES.v
+set_global_assignment -name VERILOG_FILE ../test_benches/inv_mix_column_tb.v
+set_global_assignment -name VERILOG_FILE ../source/inv_mix_column.v
+set_global_assignment -name VERILOG_FILE ../source/mixed_columns.v
+set_global_assignment -name VERILOG_FILE ../source/cipher.v
+set_global_assignment -name VERILOG_FILE ../test_benches/s_box_tb.v
+set_global_assignment -name VERILOG_FILE ../test_benches/sub_byte_tb.v
+set_global_assignment -name VERILOG_FILE ../source/sub_bytes.v
+set_global_assignment -name VERILOG_FILE ../test_benches/shift_rows_tb.v
+set_global_assignment -name VERILOG_FILE ../test_benches/key_expansion_tb.v
+set_global_assignment -name VERILOG_FILE ../test_benches/inv_sub_bytes_tb.v
+set_global_assignment -name VERILOG_FILE ../source/sub_word.v
+set_global_assignment -name VERILOG_FILE ../source/shift_rows.v
+set_global_assignment -name VERILOG_FILE ../source/s_box.v
+set_global_assignment -name VERILOG_FILE ../source/rot_word.v
+set_global_assignment -name VERILOG_FILE ../source/inv_sub_bytes.v
+set_global_assignment -name VERILOG_FILE ../source/inv_s_box.v
+set_global_assignment -name VERILOG_FILE ../source/key_expansion.v
+set_location_assignment PIN_AD10 -to reset
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE AREA"
+set_global_assignment -name ALM_REGISTER_PACKING_EFFORT LOW
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+set_location_assignment PIN_AE12 -to dir
+set_location_assignment PIN_W15 -to puls
+set_location_assignment PIN_AB22 -to Display4[6]
+set_location_assignment PIN_AB25 -to Display4[5]
+set_location_assignment PIN_AB28 -to Display4[4]
+set_location_assignment PIN_AC25 -to Display4[3]
+set_location_assignment PIN_AD25 -to Display4[2]
+set_location_assignment PIN_AC27 -to Display4[1]
+set_location_assignment PIN_AD26 -to Display4[0]
+set_location_assignment PIN_W25 -to Display5[6]
+set_location_assignment PIN_V23 -to Display5[5]
+set_location_assignment PIN_W24 -to Display5[4]
+set_location_assignment PIN_W22 -to Display5[3]
+set_location_assignment PIN_Y24 -to Display5[2]
+set_location_assignment PIN_Y23 -to Display5[1]
+set_location_assignment PIN_AA24 -to Display5[0]
+set_location_assignment PIN_AA25 -to Display6[6]
+set_location_assignment PIN_AA26 -to Display6[5]
+set_location_assignment PIN_AB26 -to Display6[4]
+set_location_assignment PIN_AB27 -to Display6[3]
+set_location_assignment PIN_Y27 -to Display6[2]
+set_location_assignment PIN_AA28 -to Display6[1]
+set_location_assignment PIN_V25 -to Display6[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
